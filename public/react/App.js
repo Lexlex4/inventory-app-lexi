@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './components/styles/App.module.css';
 import { SaucesList } from './components/SaucesList';
 import { SauceDetail } from './components/SauceDetail';
-import { AddSauceForm } from './components/AddSauceForm';
+import { AddSauceForm } from './components/AddSauceForm'; // Import the AddSauceForm component
 import { EditSauceForm } from './components/EditSauceForm';
 
 import apiURL from './api';
@@ -60,7 +60,7 @@ export const App = () => {
         />
       )}
       {view === 'add' && (
-        <AddSauceForm onSauceAdded={handleSauceAdded} />
+        <AddSauceForm onSauceAdded={handleSauceAdded} /> // Render AddSauceForm component when view is 'add'
       )}
       {view === 'edit' && (
         <EditSauceForm sauceId={selectedSauceId} onSauceUpdated={handleSauceUpdated} />
