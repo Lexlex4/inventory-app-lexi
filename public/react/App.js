@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styles from './styles/App.module.css';
+import styles from './components/styles/App.module.css';
 import { SaucesList } from './components/SaucesList';
 import { SauceDetail } from './components/SauceDetail';
 import { AddSauceForm } from './components/AddSauceForm';
