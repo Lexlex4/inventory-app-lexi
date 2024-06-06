@@ -5,7 +5,7 @@ import { SauceDetail } from './components/SauceDetail';
 import { AddSauceForm } from './components/AddSauceForm';
 import { EditSauceForm } from './components/EditSauceForm';
 
-import apiURL from './api';'
+import apiURL from './api';
 
 export const App = () => {
   const [sauces, setSauces] = useState([]);
