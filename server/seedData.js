@@ -1,8 +1,27 @@
 module.exports = {
+   // Price, Category, Image
   sauces: [
-    {"name" : "Sriracha", "image" : "https://64.media.tumblr.com/12cd128183713bf928bda87a24f22487/tumblr_ne6jee85PM1tha1vgo1_250.gif"},
-    {"name" : "Franks", "image": "https://cdn.streamelements.com/uploads/1887a0da-3642-4795-b5f5-774d5b377e52.gif"},
-    {"name" : "Tobasco", "image": "https://64.media.tumblr.com/1564fcf74adc3fe6542c34b6a1f05de1/tumblr_na9lew0bNS1tha1vgo1_r1_250.gif"}
+    {
+       "name": "Sriracha",
+       "description": "Careen ho nipperkin wherry mizzenmast clipper Cat o'nine tails brig pinnace take a caulk. Landlubber or just lubber ho chantey Jack Ketch strike colors barque tackle port loaded to the gunwalls cutlass. Brigantine to go on account pirate jury mast hempen halter boatswain poop deck chase guns hearties spanker.",
+       "price": 9.99,
+       "category": "Hot Sauce",
+       "image": "https://64.media.tumblr.com/12cd128183713bf928bda87a24f22487/tumblr_ne6jee85PM1tha1vgo1_250.gif"
+    },
+    {
+      "name": "Franks",
+      "description": "Jury mast scourge of the seven seas case shot gangway fluke me Buccaneer reef sails tack square-rigged. Brethren of the Coast blow the man down ahoy Corsair capstan loaded to the gunwalls bowsprit scallywag bounty port. Pirate Jack Tar capstan booty six pounders parrel run a shot across the bow reef bilge rat Blimey.",
+      "price": 4.95,
+      "category": "Hot Sauce",
+      "image": "https://cdn.streamelements.com/uploads/1887a0da-3642-4795-b5f5-774d5b377e52.gif"
+    },
+    {
+       "name": "Tobasco",
+       "description": "Nipper keel grog ye Pirate Round haul wind log Sea Legs blow the man down spyglass. Measured fer yer chains spike keel scuttle long boat log long clothes rutters draft lugsail. Keel scuppers Arr mutiny chantey square-rigged draught Chain Shot blow the man down holystone.",
+       "price": 6.74,
+       "category": "Hot Sauce",
+       "image": "https://64.media.tumblr.com/1564fcf74adc3fe6542c34b6a1f05de1/tumblr_na9lew0bNS1tha1vgo1_r1_250.gif"
+    }
   ],
   items: [
     {
