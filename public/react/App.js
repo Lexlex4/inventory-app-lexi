@@ -26,18 +26,21 @@ export const App = () => {
   }, []);
 
   const handleSauceAdded = () => {
-    fetchSauces();
-    setView('list');
+    fetchSauces().then(() => {
+      setView('list');
+    });
   };
 
   const handleSauceDeleted = () => {
-    fetchSauces();
-    setView('list');
+    fetchSauces().then(() => {
+      setView('list');
+    });
   };
 
   const handleSauceUpdated = () => {
-    fetchSauces();
-    setView('list');
+    fetchSauces().then(() => {
+      setView('list');
+    });
   };
 
   const handleEditSauce = (sauceId) => {
