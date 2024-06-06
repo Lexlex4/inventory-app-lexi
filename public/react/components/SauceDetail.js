@@ -20,6 +20,19 @@ export const SauceDetail = ({ sauceId, onBack, onDelete, onEdit, onSauceUpdated 
     setEditedSauce({ ...editedSauce, [name]: value });
   };
 
+  const handleClick = () => {
+    const message = "Are you sure you want to delete this sauce?";
+    const isConfirmed = window.confirm(message);
+    if (!isConfirmed) return;
+
+    fetch(`${apiURL}/sauces/${sauceId}`, {
+      method: 'DELETE',
+    }).then(response => {
+      if (!response.ok) return;
+      onDelete();
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     fetch(`${apiURL}/sauces/${sauceId}`, {
@@ -40,7 +53,7 @@ export const SauceDetail = ({ sauceId, onBack, onDelete, onEdit, onSauceUpdated 
   return (
     <div className={styles.detailContainer}>
       <button onClick={onBack}>Back</button>
-      <button onClick={onDelete}>Delete</button>
+      <button onClick={handleClick}>Delete</button>
       <button onClick={onEdit}>Edit</button>
       <h1>{sauce.name}</h1>
       <p>{sauce.description}</p>
