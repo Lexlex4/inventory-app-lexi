@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styles from './components/styles/App.module.css';
 import { SaucesList } from './components/SaucesList';
 import { SauceDetail } from './components/SauceDetail';
-import { AddSauceForm } from './components/AddSauceForm'; // Import the AddSauceForm component
+import { AddSauceForm } from './components/AddSauceForm';
 import { EditSauceForm } from './components/EditSauceForm';
-
 import apiURL from './api';
 
 export const App = () => {
@@ -38,7 +37,12 @@ export const App = () => {
 
   const handleSauceUpdated = () => {
     fetchSauces();
-    setView('detail');
+    setView('list');
+  };
+
+  const handleEditSauce = (sauceId) => {
+    setSelectedSauceId(sauceId);
+    setView('edit');
   };
 
   return (
@@ -48,7 +52,7 @@ export const App = () => {
       {view === 'list' && (
         <>
           <button onClick={() => setView('add')}>Add New Sauce</button>
-          <SaucesList sauces={sauces} onSauceSelect={setSelectedSauceId} onViewChange={setView} />
+          <SaucesList sauces={sauces} onSauceSelect={setSelectedSauceId} onViewChange={setView} onEditSauce={handleEditSauce} />
         </>
       )}
       {view === 'detail' && (
@@ -57,10 +61,11 @@ export const App = () => {
           onBack={() => setView('list')}
           onDelete={handleSauceDeleted}
           onEdit={() => setView('edit')}
+          onSauceUpdated={handleSauceUpdated}
         />
       )}
       {view === 'add' && (
-        <AddSauceForm onSauceAdded={handleSauceAdded} /> // Render AddSauceForm component when view is 'add'
+        <AddSauceForm onSauceAdded={handleSauceAdded} />
       )}
       {view === 'edit' && (
         <EditSauceForm sauceId={selectedSauceId} onSauceUpdated={handleSauceUpdated} />
