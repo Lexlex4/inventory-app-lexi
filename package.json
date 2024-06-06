@@ -16,7 +16,6 @@
     "express": "^4.17.1",
     "morgan": "1.10.0",
     "nodemon": "^2.0.19",
-    "parcel": "^2.8.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-test-renderer": "^18.2.0",
@@ -27,6 +26,12 @@
     "@testing-library/react": "^12.0.0",
     "babel-jest": "^27.1.0",
     "jest": "^27.1.0",
+    "parcel": "^2.12.0",
     "process": "^0.11.10"
-  }
+  },
+  "description": "![logo](https://user-images.githubusercontent.com/44912347/202296600-c5f247d6-9616-49db-88f0-38433429d781.jpg)",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
